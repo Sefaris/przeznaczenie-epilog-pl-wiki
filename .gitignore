@@ -1,0 +1,7 @@
+node_modules/
+build/
+.docusaurus/
+.pnpm-store/
+*.log
+__pycache__/
+materialy

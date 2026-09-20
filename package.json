@@ -1,0 +1,36 @@
+{
+  "name": "sefaris-przeznaczenie-epilog-wiki",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@11.19.0",
+  "scripts": {
+    "start": "docusaurus start --host 127.0.0.1 --port 3013 --no-open",
+    "build": "docusaurus build",
+    "serve": "docusaurus serve --host 127.0.0.1 --port 3013 --no-open",
+    "clear": "docusaurus clear",
+    "verify": "node scripts/verify-build.mjs",
+    "check": "node --test scripts/toc-highlight.test.mjs && pnpm build && pnpm verify",
+    "texts:build": "python scripts/text_tools.py build",
+    "texts:search": "python scripts/text_tools.py search",
+    "texts:section": "python scripts/text_tools.py section",
+    "test:texts": "python -m unittest discover -s scripts -p test_text_tools.py"
+  },
+  "dependencies": {
+    "@docusaurus/core": "3.10.2",
+    "@docusaurus/plugin-content-docs": "3.10.2",
+    "@docusaurus/preset-classic": "3.10.2",
+    "@fontsource/lato": "5.3.0",
+    "@mdx-js/react": "3.1.1",
+    "clsx": "2.1.1",
+    "gray-matter": "4.0.3",
+    "lucide-react": "0.468.0",
+    "prism-react-renderer": "2.4.1",
+    "react": "19.2.0",
+    "react-dom": "19.2.0"
+  },
+  "engines": { "node": ">=22.13.0" },
+  "browserslist": {
+    "production": [">0.5%", "not dead", "not op_mini all"],
+    "development": ["last 3 chrome versions", "last 3 firefox versions", "last 5 safari versions"]
+  }
+}
